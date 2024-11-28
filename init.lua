@@ -23,6 +23,10 @@ require("lazy").setup({
   },
 
   { import = "plugins" },
+
+    -- Atom one dark theme: 
+  -- { "nxstynate/oneDarkPro.nvim", priority = 1000 },
+  { 'navarasu/onedark.nvim' }, 
 }, lazy_config)
 
 -- load theme
@@ -31,6 +35,11 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
+
+require('onedark').setup {
+  style = 'darker'
+}
+require('onedark').load()
 
 vim.schedule(function()
   require "mappings"
