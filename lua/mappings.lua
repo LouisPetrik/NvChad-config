@@ -7,4 +7,6 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- Add Command + S mapping (save file, usually :w)
+map("n", "<D-s>", ":w<CR>")  -- Normal mode
+map("i", "<D-s>", "<ESC>:w<CR>")  -- Insert mode
